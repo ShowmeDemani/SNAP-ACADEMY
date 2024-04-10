@@ -1,0 +1,73 @@
+<!-- Allison Hua
+     4-9-24
+     Snapchat Academy : Project Assessment -->
+
+<!DOCTYPE html>
+
+<head>
+    <title>Closet Makeover</title>
+    <link rel = "icon" type = "image/x-icon" href = "images/jewelrybox.png">
+    <link rel = "stylesheet" href = "style.css"> <!-- links to external CSS file -->
+    <script src = "scripts.js"></script> <!-- links to external JS file -->
+    <link href='https://fonts.googleapis.com/css?family=Playfair Display' rel='stylesheet'> <!-- google fonts -->
+    <meta charset = "UTF-8"> <!-- emojis -->
+</head>
+
+<html>
+    <body>
+        <h1>~! Realize Your New Style &#128525 !~</h1>
+        <div id = "outside" style = "display: block">
+            <img src = "images/winxcloset.png" usemap = "#closetdoors">
+            <map name = "closetdoors">
+                <area shape = "rect" coords = "220, 125, 385, 500" " title = "open" onclick = "openRoom()">
+            </map>
+        </div>
+        <div id = "inside" style = "display: none">
+            <div id = "stage" style = "display: none">
+                <img id = "headImage">
+                <img id = "accessoryImage">
+                <div class = "side">
+                    <img id = "topImage">
+                    <img id = "bagImage">
+                </div>
+                <img id = "bottomImage"> 
+                <img id = "feetImage">
+            </div>
+            
+            <div id = "closet" style = "display: none">
+                <h2>
+                    <button class = "lookButtons" onclick = "toggleActions(0)" style = "display: none">Look 1</button>
+                    <button class = "lookButtons" onclick = "toggleActions(1)" style = "display: none">Look 2</button>
+                    <button class = "lookButtons" onclick = "toggleActions(2)" style = "display: none">Look 3</button>
+                    <button class = "lookButtons" id = "restartButton" onclick = "restart()" style = "display: none">Go Back to Start</button>
+                </h2>
+
+                <div id = "action" style = "display: none">
+                    <h3>
+                        <button class = "actionButtons" id = "editButton" onclick = "editLook()" style = "display: none">Edit</button>
+                        <button class = "actionButtons" id = "clearButton" onclick = "clearLook()" style = "display: none">Clear</button>
+                        <button class = "actionButtons" id = "goBackToLooksButton" onclick = "goBackToLooks()" style = "display: none">Go Back to Looks</button>
+                    </h3>
+                </div>
+                
+                <div id = "clothes" style = "display: none">
+                    <h4>
+                        <button class = "categoryButtons" onclick = "categories(0)" style = "display: block">Head</button>
+                        <button class = "categoryButtons" onclick = "categories(1)" style = "display: block">Accessory</button>
+                        <button class = "categoryButtons" onclick = "categories(2)" style = "display: block">Dress</button>
+                        <button class = "categoryButtons" onclick = "categories(3)" style = "display: block">Top</button>
+                        <button class = "categoryButtons" onclick = "categories(4)" style = "display: block">Bag</button>
+                        <button class = "categoryButtons" onclick = "categories(5)" style = "display: block">Bottom</button>
+                        <button class = "categoryButtons" onclick = "categories(6)" style = "display: block">Feet</button>
+                        <button class = "categoryButtons" onclick = "categories(7)" style = "display: block">Background</button>
+                    </h4>
+                    <img id = "itemImage">
+                    <h5>
+                        <button id = "chooseButton" onclick = "chooseItem()" style = "display: none">OMG, I love this one!</button>
+                        <button id = "scrollButton" onclick = "scrollThroughItems()" style = "display: none">Hmm, not feeling this one...</button>
+                    </h5>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
