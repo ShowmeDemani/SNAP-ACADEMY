@@ -124,14 +124,15 @@ function editLook()
    document.getElementById("restartButton").style.display = "none";
    document.getElementById("editButton").disabled = true;
    document.getElementById("editButton").style.backgroundColor = "lightgray";
-   document.getElementById("goBackToLooksButton").style.display = "block";
+   document.getElementById("goBackToLooksButton").style.display = "none";
    for (lookIndex = 0; lookIndex < collection[collectionIndex].length; lookIndex++)
    {
       displayLook(lookIndex);
    }
    let categoryButtons = document.querySelectorAll(".categoryButtons"); // display all buttons
    categoryButtons.forEach(button => {
-      button.style.display = "block";
+      button.style.flex = "center";
+      button.style.alignItems = "center"
    } )
 }
 

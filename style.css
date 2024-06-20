@@ -74,13 +74,25 @@ h2, h3, h4, h5
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
+    margin: 0 auto;
 }
 button
 {
-    margin: 5px;
+    margin: 5px auto;
     color: hotpink;
     font-family: Georgia;
     font-size: 100%;
     background-color: rgb(226, 206, 251);
     border-color: #c9e8fc;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
 } 
+
+.lookButtons{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
